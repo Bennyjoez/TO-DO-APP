@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/31cad6a940.js" crossorigin="anonymous"></script>
+    <title>TO DO LIST</title>
+</head>
+<body>
+    <div class="container">
+        <!--This is the banner section-->
+        <header class="heading-container">
+            <h1>Things To Do</h1>
+            <h3>On your schedule today: </h3>
+            <!--search bar to look for tasks-->
+            <form action="#" class="search-bar">
+                <input type="text" id="search" placeholder="Search tasks... ">
+            </form>
+        </header>
+        <main>
+            <!--shows the list of tasks to be done-->
+            <div class="task-container"><label for="ul"><h4>Tasks to perform:</h4></label>
+                <ul id="ul">
+                    <li>
+                        <i class="fa-solid fa-thumbtack"></i> Take out the trash 
+                        <button id="delete">Delete <i class="fa-solid fa-trash-can"></i></button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-thumbtack"></i> Go on a morning jog 
+                        <button id="delete">Delete <i class="fa-solid fa-trash-can"></i></button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-thumbtack"></i> Clean the car 
+                        <button id="delete">Delete <i class="fa-solid fa-trash-can"></i></button>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-thumbtack"></i> Check your emails 
+                        <button id="delete">Delete <i class="fa-solid fa-trash-can"></i></button>
+                    </li>
+                </ul>
+            </div>
+            <!--this section helps add a task to the page-->
+            <div>
+                <form action="#" class="add-task">
+                    <input type="text," placeholder="Add Task..." required></input>
+                    <button type="submit" id="add-task">ADD <i class="fa-solid fa-calendar-check"></i></button>
+                    
+                </form>
+            </div>
+            <br>
+        </main>
+    </div>
+      
+</body>
+</html>

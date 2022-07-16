@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border: 1px solid black; */
+}
+
+body {
+    margin: 5% 10% 5% 10%;
+    box-shadow: 0px 0px 5px 8px rgb(206, 200, 200);
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 1800px;
+    max-height: 1000px;
+}
+.container {
+    background-color: beige;
+}
+.heading-container {
+    background-color: rgb(54, 52, 52);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: normal;
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 1.6rem;
+}
+
+.task-container {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar input {
+    min-height: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+h4 {
+    padding: 20px 0px;
+}
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 20px 30px ;
+    border: 1px solid black;
+    box-shadow: 0px -5px 2px 5px rgb(75, 75, 60);
+    font-size: calc(0.8rem + 1vw);
+}
+
+#delete {
+    float: right;
+    letter-spacing: 0.3mm;
+    background-color: blueviolet;
+
+}
+button {
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+button:hover {
+    cursor: pointer;
+    padding: 8px;
+}
+#delete i {
+    display: none;
+}
+
+#delete:hover {
+    background-color: rgb(241, 12, 12);
+}
+
+#delete:hover i {
+    display: contents;
+}
+.add-task {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 30%;
+}
+
+.add-task input {
+    width: 60%;
+}
+
+.add-task button {
+    margin: auto;
+    min-width: 15%;
+    background-color: rgb(110, 52, 165);
+} 
+
+.add-task button i {
+    display: none;
+    height: 10px;
+    width: 10px;
+    color: lightblue;
+    background-color: blue;
+}
+
+.add-task button:hover {
+    background-color: green;
+}
+
+.add-task button:hover i {
+    display: contents;
+}
+ul li:nth-child(odd) {
+    background-color: goldenrod;
+    background-size: cover;
+}
+
+@media (max-width: 800px) {
+    #delete {
+        float: none;
+        margin-left: 0px;
+    }
+    .add-task input {
+        margin: auto
+    }
+}
+
+@media (min-width: 900px) {
+    #delete {
+        margin-left: 70px;
+    }
+}
+/* @media (max-width:446px) {
+    * {
+        font-size: large;
+    }
+
+    ul li {
+        padding: 30px auto;
+    }
+}
+
+@media (min-width:500px) {
+    * {
+        font-size: x-large;
+    }
+}
+@media (max-width:800px) {
+    * {
+        font-size: medium;
+    }
+} */
+
