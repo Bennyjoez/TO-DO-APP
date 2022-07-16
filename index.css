@@ -11,13 +11,13 @@ body {
     box-shadow: 0px 0px 5px 8px rgb(206, 200, 200);
     padding: 10px;
     border-radius: 10px;
-    max-width: 1800px;
+    max-width: 1500px;
     max-height: 1000px;
 }
 .container {
     background-color: beige;
 }
-.heading-container {
+.header-container {
     background-color: rgb(54, 52, 52);
     display: flex;
     flex-direction: column;
@@ -37,10 +37,17 @@ body {
     justify-content: space-between;
 }
 
-.search-bar input {
+.header-container form {
     min-height: 30px;
     border-radius: 10px;
     margin-top: 20px;
+}
+
+h1 {
+    color: darkgrey;
+}
+h3 {
+    color: antiquewhite;
 }
 
 h4 {
@@ -55,10 +62,11 @@ ul li {
     border: 1px solid black;
     box-shadow: 0px -5px 2px 5px rgb(75, 75, 60);
     font-size: calc(0.8rem + 1vw);
+    padding: 30px;
 }
 
-#delete {
-    float: right;
+.delete-button {
+    /* float: right; */
     letter-spacing: 0.3mm;
     background-color: blueviolet;
 
@@ -73,15 +81,15 @@ button:hover {
     cursor: pointer;
     padding: 8px;
 }
-#delete i {
+.delete-button i {
     display: none;
 }
 
-#delete:hover {
+.delete-button:hover, .delete-button:active {
     background-color: rgb(241, 12, 12);
 }
 
-#delete:hover i {
+.delete-button:hover i, .delete-button:active i {
     display: contents;
 }
 .add-task {
@@ -108,11 +116,11 @@ button:hover {
     background-color: blue;
 }
 
-.add-task button:hover {
+.add-task button:hover, .add-task button:active {
     background-color: green;
 }
 
-.add-task button:hover i {
+.add-task button:hover i, .add-task button:active i {
     display: contents;
 }
 ul li:nth-child(odd) {
@@ -120,39 +128,50 @@ ul li:nth-child(odd) {
     background-size: cover;
 }
 
-@media (max-width: 800px) {
-    #delete {
-        float: none;
-        margin-left: 0px;
-    }
-    .add-task input {
-        margin: auto
+@media (max-width: 600px) {
+    body {
+        min-width: 90%;
+        min-height: 90%;
+        margin: auto;
     }
 }
 
-@media (min-width: 900px) {
-    #delete {
+@media (max-width: 999px) {
+
+    .delete-button {
+        float: none;
+        margin-left: 0px;
+        padding: 2px;
+
+    }
+    .add-task {
+        margin: 30px
+    }
+
+    .add-task button:hover {
+        height: 30px;
+        width: fit-content;
+        margin-left: 10px;
+        padding: 5px
+    }
+
+    h1, h3 {
+        padding: 5px;
+        font-size: smaller
+    }
+
+    .task-container {
+        width: 90%;
+    }
+    .task-container ul li {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .delete-button {
+        float: right;
         margin-left: 70px;
     }
 }
-/* @media (max-width:446px) {
-    * {
-        font-size: large;
-    }
-
-    ul li {
-        padding: 30px auto;
-    }
-}
-
-@media (min-width:500px) {
-    * {
-        font-size: x-large;
-    }
-}
-@media (max-width:800px) {
-    * {
-        font-size: medium;
-    }
-} */
 
