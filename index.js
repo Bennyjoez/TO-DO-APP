@@ -1,5 +1,11 @@
-let deleteButton = document.getElementsByClassName('delete-button'); 
+let searchBar = document.getElementById('search')
+
+let deleteButtons = document.getElementsByClassName('delete-button'); 
 
 let header = document.getElementsByClassName('header-container')
-console.log(header);
+
+let addTaskButton = document.getElementById('add-task')
+
+let addTaskBox = document.getElementById('add-task-box')
+console.log(addTaskBox);
 
