@@ -66,7 +66,6 @@ ul li {
 }
 
 .delete-button {
-    /* float: right; */
     letter-spacing: 0.3mm;
     background-color: blueviolet;
 
@@ -128,6 +127,14 @@ ul li:nth-child(odd) {
     background-size: cover;
 }
 
+.color {
+    color: rgb(81, 7, 151);
+}
+
+.color:hover {
+    color: green
+}
+
 @media (max-width: 600px) {
     body {
         min-width: 90%;
@@ -168,10 +175,4 @@ ul li:nth-child(odd) {
     }
 }
 
-@media (min-width: 1000px) {
-    .delete-button {
-        float: right;
-        margin-left: 70px;
-    }
-}
 
