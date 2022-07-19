@@ -16,46 +16,52 @@
             <h1 class="title">Things To Do</h1>
             <h3 class="title">On your schedule today: </h3>
             <!--search bar to look for tasks-->
-            <form action="#" class="search-bar">
+            <form action="#" id="search-bar">
                 <input type="text" id="search" placeholder="Search tasks... ">
             </form>
         </header>
         <main>
             <!--shows the list of tasks to be done-->
-            <div class="task-container"><label for="ul"><h4>Tasks to perform:</h4></label>
+            <div class="task-container">
+                <label for="ul"><h4>Tasks to perform:</h4></label>
                 <ul id="ul">
                     <li>
-                        <i class="fa-solid fa-thumbtack"></i> <span class="name">Take out the trash on a monday morning</span>
-                        <button class="delete-button">Delete <i class="fa-solid fa-trash-can"></i></button>
+                        <i class="fa-solid fa-thumbtack"></i><span class="name">Take out the trash on a monday morning</span>
+                        <button class="delete-button">Delete<i class="fa-solid fa-trash-can"></i></button>
                         <i class="fa-solid fa-pen-to-square color"></i>
                     </li>
                     <li>
-                        <i class="fa-solid fa-thumbtack"></i> <span class="name">Go on a morning jog before having breakfast</span>
-                        <button class="delete-button">Delete <i class="fa-solid fa-trash-can"></i></button>
+                        <i class="fa-solid fa-thumbtack"></i><span class="name">Go on a morning jog before having breakfast</span>
+                        <button class="delete-button">Delete<i class="fa-solid fa-trash-can"></i></button>
                         <i class="fa-solid fa-pen-to-square color"></i>
                     </li>
                     <li>
-                        <i class="fa-solid fa-thumbtack"></i> <span class="name">Clean the car</span> 
-                        <button class="delete-button">Delete <i class="fa-solid fa-trash-can"></i></button>
+                        <i class="fa-solid fa-thumbtack"></i><span class="name">Clean the car</span> 
+                        <button class="delete-button">Delete<i class="fa-solid fa-trash-can"></i></button>
                         <i class="fa-solid fa-pen-to-square color"></i>
                     </li>
                     <li>
-                        <i class="fa-solid fa-thumbtack"></i> <span class="name">Check your emails on a daily basis to get secveral updates on your day's proceedings</span>
-                        <button class="delete-button">Delete <i class="fa-solid fa-trash-can"></i></button>
+                        <i class="fa-solid fa-thumbtack"></i><span class="name">Check your emails on a daily basis to get secveral updates on your day's proceedings</span>
+                        <button class="delete-button">Delete<i class="fa-solid fa-trash-can"></i></button>
                         <i class="fa-solid fa-pen-to-square color"></i>
                     </li>
                     <li>
-                        <i class="fa-solid fa-thumbtack"></i> <span class="name">Check your emails on a daily basis to get secveral updates on your day's proceedings</span>
-                        <button class="delete-button">Delete <i class="fa-solid fa-trash-can"></i></button>
+                        <i class="fa-solid fa-thumbtack"></i><span class="name">Check your emails on a daily basis to get secveral updates on your day's proceedings</span>
+                        <button class="delete-button">Delete<i class="fa-solid fa-trash-can"></i></button>
                         <i class="fa-solid fa-pen-to-square color"></i>
                     </li>
                 </ul>
             </div>
             <!--this section helps add a task to the page-->
             <div>
-                <form action="#" class="add-task">
-                    <input type="text," placeholder="Add Task..." id="add-task-box" required></input>
-                    <button type="submit" id="add-task">ADD <i class="fa-solid fa-calendar-check"></i></button>
+                <form action="#" id="task-entry">
+                    <div class="hide">
+                        <input type="checkbox" id="hide"/>
+                        <label for="hide">Hide All Tasks</label>
+                    </div>
+                    
+                    <input type="text", placeholder="Add Task..." id="add-task-box" required></input>
+                    <input type="submit" id="add-task" value="ADD"></input>
                     
                 </form>
             </div>
