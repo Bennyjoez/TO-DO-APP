@@ -77,9 +77,8 @@ ul li {
     padding: 30px;
 }
 
-.delete-button {
+.delete-button, .color {
     letter-spacing: 0.3mm;
-    background-color: blueviolet;
 
 }
 button, #add-task {
@@ -124,9 +123,7 @@ button:hover {
 
 
 #add-task {
-    /* margin: auto; */
     width: 100PX;
-    background-color: rgb(110, 52, 165);
 } 
 
 
@@ -143,12 +140,16 @@ ul li:nth-child(odd) {
     background-size: cover;
 }
 
+
+
 .color {
-    color: rgb(81, 7, 151);
+    background-color: blueviolet;
 }
 
-.color:hover {
-    color: green
+
+
+.hover:hover {
+    background-color: green
 }
 
 #task-entry #hide {
@@ -167,13 +168,6 @@ ul li:nth-child(odd) {
 }
 
 @media (max-width: 999px) {
-
-    .delete-button {
-        float: none;
-        margin-left: 0px;
-        padding: 2px;
-
-    }
 
     h1, h3 {
         padding: 5px;

@@ -1,7 +1,7 @@
 //delete a task
 const list = document.querySelector('.task-container ul'); 
 list.addEventListener('click', function(e){
-    if(e.target.className == 'delete-button'){
+    if(e.target.textContent == 'Delete'){
         const li = e.target.parentElement;
         list.removeChild(li);
     }
@@ -19,31 +19,34 @@ addForm.addEventListener('submit', function(e){
     const thumbtack = document.createElement('i');
     const taskName = document.createElement('span');
     const deleteButton = document.createElement('button');
-    const editIcon = document.createElement('i');
+    const editIcon = document.createElement('button');
+    // const trashCan = document.createElement('i');
 
-    //add classes 
+    //add classes and IDs
     taskName.classList.add('name');
-    deleteButton.classList.add('delete-button');
-    editIcon.classList.add('fa-solid', 'fa-pen-to-square', 'color');
+    deleteButton.classList.add('delete-button', 'color');
+    editIcon.classList.add('color', 'hover');
     thumbtack.classList.add('fa-solid', 'fa-thumbtack');
-    
-    // thumbtack.classList.add('fa-solid fa-thumbtack')
-    // taskName.classList.add('name');
-    // deleteButton.classList.add('delete-button');
-    // editIcon.classList.add("fa-solid fa-pen-to-square color")
+    // trashCan.classList.add('fa-solid', 'fa-trash-can');
 
     //append the created elements to the document
     li.appendChild(thumbtack);
-    li.appendChild(taskName)
+    li.appendChild(taskName);
     li.appendChild(deleteButton);
     li.appendChild(editIcon);
     list.appendChild(li);
 
     //add content passed and the defaults
-    deleteButton.textContent = "Delete"
-    taskName.textContent = value
+    deleteButton.textContent = "Delete";
+    editIcon.textContent = "Edit";
+    taskName.textContent = value;
 
-})
+    //styling some elements 
+    editIcon.style.marginLeft = '5px';
+    deleteButton.style.marginLeft = '5px';
+
+
+});
 
 //setting the hide button 
     //creating a reference to the checkbox
@@ -74,15 +77,30 @@ searchBar.addEventListener('keyup', function(e) {
 });
 
 
+//setting the editIcon
 
+function save(el) {
+    let textToEdit = el.parentNode.children[1].value;
+    let spanSave = document.createElement('span');
+    spanSave.textContent = textToEdit;
+    el.parentNode.children[1].replaceWith(spanSave);
 
-// //wordings added as tasks
-// let taskNames = document.getElementsByClassName('name')
-// //convert the taskNames into an array
-// let taskNamesArr = Array.from(taskNames)
-// // add a task number to each task
-// for (let i =0; i < taskNamesArr.length; i++) {
-//     taskNamesArr[i].textContent += ` (Task ${i + 1})`
-// }
+    let editButton = document.createElement('button')
+    editButton.textContent = 'Edit';
+    editButton.setAttribute('onclick', 'editfunction(this)');
+    el.parentNode.children[3].replaceWith(editButton);
+}
+    
+function editfunction(el) {
+    let textToEdit = el.parentNode.children[1].textContent;
+    let editBox = document.createElement('input');
+    editBox.value = textToEdit;
+    el.parentNode.replaceChild(editBox, el.parentNode.children[1])
+
+    let saveButton = document.createElement('button')
+    saveButton.textContent = 'Save';
+    saveButton.setAttribute("onclick", "save(this)")
+    el.parentNode.children[3].replaceWith(saveButton);
+}
 
 
